@@ -3,6 +3,7 @@ from django.core.mail import message
 from django.http.response import HttpResponse
 from django.shortcuts import redirect, render
 from django.utils.http import urlsafe_base64_decode
+from django.template.loader import get_template
 
 from vendor.forms import VendorForm
 from .forms import UserForm
@@ -12,6 +13,7 @@ from .utils import detectUser, send_password_reset_email, send_verification_emai
 from django.contrib.auth.decorators import login_required, user_passes_test
 
 from django.core.exceptions import PermissionDenied
+from vendor.models import Vendor
 
 
 # Restrict the vendor from accessing the customer page
@@ -166,7 +168,13 @@ def myAccount(request):
 @login_required(login_url='login')
 @user_passes_test(check_role_customer)
 def custDashboard(request):
-    return render(request, 'accounts/custDashboard.html')
+    try:
+        get_template('accounts/custDashboard.html')  # Try loading the template
+        return render(request, 'accounts/custDashboard.html', {})
+    except Exception as e:
+        return HttpResponse(f"Error: {e}")
+    
+    # return render(request, 'accounts/cust_dashboard.html')
 
 
 @login_required(login_url='login')
@@ -227,5 +235,4 @@ def reset_password(request):
         else:
             messages.error(request, 'Password do not match!')
             return redirect('reset_password')
-    return render(request, 'accounts/reset_password.html')
     return render(request, 'accounts/reset_password.html')
