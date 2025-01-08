@@ -20,7 +20,7 @@ def detectUser(user):
     
 
     # Send verification email to user
-def send_verification_email(request, user):
+def send_verification_email(request, user,mail_subject, email_template):
     from_email = settings.DEFAULT_FROM_EMAIL
     current_site = get_current_site(request)  # Get the current site domain
     mail_subject = 'Please activate your account'  # Email subject

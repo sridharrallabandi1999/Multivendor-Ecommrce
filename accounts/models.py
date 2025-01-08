@@ -35,6 +35,7 @@ class UserManager(BaseUserManager):
         user.is_superadmin = True
         user.save(using=self._db)
         return user
+       
 
 
 class User(AbstractBaseUser):
@@ -103,3 +104,4 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.user.email
+    
