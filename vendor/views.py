@@ -16,12 +16,8 @@ from django.template.defaultfilters import slugify
 
 
 def get_vendor(request):
-    try:
-        vendor = Vendor.objects.get(user=request.user)
-    except Vendor.DoesNotExist:
-        vendor = None
+    vendor = Vendor.objects.get(user=request.user)
     return vendor
-
 
 
 @login_required(login_url='login')
@@ -58,15 +54,11 @@ def vprofile(request):
 @user_passes_test(check_role_vendor)
 def menu_builder(request):
     vendor = get_vendor(request)
-    if not vendor:
-        messages.error(request, "Vendor profile does not exist.")
-        return redirect('vendorDashboard')  # Redirect to a relevant page or show an error message
     categories = Category.objects.filter(vendor=vendor).order_by('created_at')
     context = {
         'categories': categories,
     }
     return render(request, 'vendor/menu_builder.html', context)
-
 
 
 @login_required(login_url='login')

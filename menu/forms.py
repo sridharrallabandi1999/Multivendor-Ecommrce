@@ -1,5 +1,4 @@
 from django import forms
-from menu.models import Category
 
 from accounts.validators import allow_only_images_validator
 from .models import Category, FoodItem
