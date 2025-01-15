@@ -4,6 +4,8 @@ from django.db.models.fields.related import ForeignKey, OneToOneField
 
 from django.contrib.gis.db import models as gismodels
 from django.contrib.gis.geos import Point
+from osgeo import gdal
+from django.contrib.gis import admin
 
 
 # Create your models here.
