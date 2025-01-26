@@ -54,3 +54,123 @@ table > tbody > tr > td{
 .payment-method [type=radio]:checked + img{
     outline: 2px solid #ff0000;
 }
+
+
+/* Responsive for small screens (phones) */
+@media only screen and (max-width: 480px) {
+    /* Button styling */
+    a.get-start-btn {
+        display: block;
+        margin-top: 15px !important;
+        margin-left: auto !important;
+        margin-right: auto !important; /* Center align the button */
+        text-align: center; /* Center the text inside the button */
+    }
+
+    /* Main search bar adjustments */
+    .main-search-bar {
+        padding-top: 100px !important;
+        padding-bottom: 50px !important;
+        background-position: center !important; /* Ensure alignment for smaller screens */
+        background-size: cover !important; /* Make sure the background image scales */
+    }
+
+    /* User dashboard adjustments */
+    .user-dashboard {
+        width: 100% !important;
+        padding: 10px; /* Add some padding for better spacing */
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    /* Quantity adjustment in menu item holder */
+    .menu-itam-holder .quantity {
+        right: 0 !important;
+        top: auto; /* Ensure positioning is consistent across devices */
+        margin-top: -15px !important; /* Fine-tuned for better alignment */
+    }
+
+    /* Table adjustments for opening hours */
+    .table.opening_hours {
+        width: 100% !important;
+        border-collapse: collapse; /* Ensure clean table layout */
+    }
+
+    /* Table cell adjustments */
+    .table td {
+        padding: 0.5rem !important;
+        font-size: 14px; /* Ensure text is legible on smaller screens */
+        word-wrap: break-word; /* Prevent text overflow */
+    }
+
+    /* Additional responsive refinements */
+    .container {
+        padding: 0 15px; /* Reduce padding for smaller screens */
+    }
+
+    .row {
+        margin: 0; /* Avoid additional horizontal scrolling */
+    }
+
+    .card {
+        margin-bottom: 15px; /* Add spacing between cards for better readability */
+    }
+
+    .btn {
+        font-size: 14px; /* Adjust button font size for mobile */
+        padding: 8px 12px; /* Adjust padding for touch-friendliness */
+    }
+}
+
+/* Responsive for tablets (iPad Mini and similar devices) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    /* General container adjustments */
+    .container {
+        padding: 0 20px; /* Add more padding for tablets */
+    }
+
+    /* Main search bar adjustments */
+    .main-search-bar {
+        padding-top: 80px !important;
+        padding-bottom: 40px !important;
+        background-position: center top !important;
+        background-size: cover !important;
+    }
+
+    /* User dashboard adjustments */
+    .user-dashboard {
+        width: 100% !important;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    /* Cards adjustments */
+    .card {
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+
+    /* Table adjustments */
+    .table.opening_hours {
+        width: 100% !important;
+        border-collapse: collapse;
+    }
+
+    .table td {
+        padding: 0.75rem !important;
+        font-size: 15px; /* Slightly larger font for tablets */
+        word-wrap: break-word;
+    }
+
+    /* Menu item holder adjustments */
+    .menu-itam-holder .quantity {
+        right: 10px !important;
+        margin-top: -20px !important;
+    }
+
+    /* Button adjustments */
+    .btn {
+        font-size: 15px; /* Adjust button font size for tablets */
+        padding: 10px 15px; /* Touch-friendly padding */
+    }
+}
+

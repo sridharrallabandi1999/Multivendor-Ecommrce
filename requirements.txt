@@ -1,9 +1,16 @@
 asgiref==3.8.1
-Django==5.1.4
+certifi==2024.12.14
+charset-normalizer==3.4.1
+Django==5.1.5
+GDAL @ file:///C:/Users/User/OneDrive/Desktop/fodOnline/GDAL-3.9.2-cp312-cp312-win_amd64.whl#sha256=83409fa04412efd11652601ddab443a1e255492c58eb5a98f001f5db3b60be3d
+idna==3.10
 pillow==11.1.0
-psycopg2==2.9.10
 psycopg2-binary==2.9.10
 python-decouple==3.8
+razorpay==1.4.2
+requests==2.32.3
+setuptools==75.8.0
+simplejson==3.19.3
 sqlparse==0.5.3
-typing_extensions==4.12.2
 tzdata==2024.2
+urllib3==2.3.0
