@@ -3,7 +3,9 @@ certifi==2024.12.14
 charset-normalizer==3.4.1
 Django==5.1.5
 GDAL @ file:///C:/Users/User/OneDrive/Desktop/fodOnline/GDAL-3.9.2-cp312-cp312-win_amd64.whl#sha256=83409fa04412efd11652601ddab443a1e255492c58eb5a98f001f5db3b60be3d
+gunicorn==23.0.0
 idna==3.10
+packaging==24.2
 pillow==11.1.0
 psycopg2-binary==2.9.10
 python-decouple==3.8
